@@ -1,0 +1,272 @@
+
+<!doctype html>
+<html>
+<head>
+    <title>Network | Dynamic Data</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Rubik:400,700|Crimson+Text:400,400i" rel="stylesheet">
+    <link rel="stylesheet" href="fonts/icomoon/style.css">
+  
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+    <link rel="stylesheet" href="css/jquery-ui.css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+  
+  
+    <link rel="stylesheet" href="css/aos.css">
+  
+    <link rel="stylesheet" href="css/style.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>
+    <script type="text/javascript" src="./vis-network.min.js"></script>
+    <link href="./vis-network.min.css" rel="stylesheet" type="text/css" />
+
+    <style type="text/css">
+        #mynetwork {
+            /* width: 600px;
+            height: window.innerWidth; */
+            border: 1px solid lightgray;
+        }
+
+        p {
+            max-width:600px;
+        }
+
+        h4 {
+            margin-bottom:3px;
+        }
+        #infobox {
+            position: absolute;
+            /* width: 300px;
+            height: 300px;
+            top: 50%;
+            left: 50%; */
+            margin: 20px 0 0 20px;
+            /* background: #CB4B16;
+            border-radius: 1%; */
+            /* backface-visibility: hidden; */
+            visibility:hidden;
+            z-index:1;
+        }
+    </style>
+</head>
+
+<div class="banner-wrap bg-primary" style='width: 200px ' id = "infobox">
+
+      </div>
+
+<div id='infobox'>
+        <!-- <a class="h-100"><h6 style="background-color: rgba(0, 0, 0, 0.3)">hahhaha<br> Manage</h6>
+            <p>Amet sit amet dolor<strong>Lorem, ipsum dolor sit amet consectetur adipisicing.</strong></p>
+        </a> -->
+</div>
+
+<div id="mynetwork"></div>
+
+<script type="text/javascript">
+    var nodeIds, shadowState, nodesArray, nodes, edgesArray, edges, network;
+
+
+    function moveCircle(e) {
+        document.getElementById('infobox').style.left = 
+    TweenLite.to(document.getElementById('infobox'), 0.1, {
+      css: {
+        left: e.pageX,
+        top: e.pageY
+      }
+    });
+    }
+    window.addEventListener("pointermove", function(e) {
+        moveCircle(e);
+    });
+
+    function startNetwork() {
+        // this list is kept to remove a random node.. we do not add node 1 here because it's used for changes
+        nodeIds = [2, 3, 4, 5];
+        shadowState = false;
+
+
+        // create an array with nodes
+        nodesArray = [
+            {id: 1, label: '新能源汽车（甲方）', fixed: false, mass: 3, x:0, y:0, margin: 25,
+            shapeProperties: {
+                
+            }, font: {size: 20}, borderWidth : 2, level: 1, 
+            color:{background: '#929200'},// title:'aaahhh'
+            },
+            {id: 2, label: '电池供应商', level: 2, 
+            color:{background: '#888800'}},
+            {id: 3, label: '电机供应商', level: 2, 
+            color:{background: '#888800'} },
+            {id: 20, label: '电路控制系统供应商', level: 3, color:{background: '#888800'}},
+            {id: 21, label: '锂金属供应商', level: 3, color:{background: '#888800'}},
+            {id: 22, label: '电解液供应商', level: 3, color:{background: '#888800'}},
+            {id: 23, label: '隔膜供应商', level: 3, color:{background: '#888800'}},
+            {id: 31, label: '铜金属供应商', level: 3, color:{background: '#888800'}},
+            {id: 32, label: '电路控制系统供应商', level: 3, color:{background: '#888800'}},
+
+        ];
+        nodes = new vis.DataSet(nodesArray);
+
+        // create an array with edges
+        edgesArray = [
+            {from: 3, to: 1, directed: true, hoverWidth: 0, selectionWidth: 0, chosen: false},
+            {from: 2, to: 1, directed: true, hoverWidth: 0, selectionWidth: 0, chosen: false},
+            {from: 20, to: 2, directed: true, hoverWidth: 0, selectionWidth: 0, chosen: false},
+            // {from: 20, to: 3, directed: true},
+            {from: 21, to: 2, directed: true, hoverWidth: 0, selectionWidth: 0, chosen: false},
+            {from: 31, to: 3, directed: true, hoverWidth: 0, selectionWidth: 0, chosen: false},
+            {from: 22, to: 2, directed: true, hoverWidth: 0, selectionWidth: 0, chosen: false},
+            {from: 23, to: 2, directed: true, hoverWidth: 0, selectionWidth: 0, chosen: false},
+            {from: 32, to: 3, directed: true, hoverWidth: 0, selectionWidth: 0, chosen: false},
+        ];
+        edges = new vis.DataSet(edgesArray);
+
+        // create a network
+        var container = document.getElementById('mynetwork');
+        var data = {
+            nodes: nodes,
+            edges: edges
+        };
+        var options = {
+            height: String(window.innerHeight),
+            width: String(window.innerWidth),
+            interaction:{hover:true},
+			manipulation: {
+				enabled: true
+			},
+            physics:{
+                minVelocity: 0.0001,
+                // solver: 'hierarchicalRepulsion',
+                barnesHut:{
+                    damping: 0.2,
+                    // avoidOverlap: false,
+                    gravitationalConstant : -4000,
+                    springLength: 250,
+                    springConstant: 0.35
+                }
+            },
+            edges: {hoverWidth: 0, selectionWidth: 0, chosen: false},
+            nodes:{
+                margin: 15,
+                
+                shape: 'box'
+            },
+            layout:{
+                hierarchical:{
+                    enabled: false,
+                    blockShifting: false,
+                    direction: 'RL'
+                },
+                randomSeed : 6666
+            }
+        };
+
+        String.prototype.format = function () {
+        var args = [].slice.call(arguments);
+        return this.replace(/(\{\d+\})/g, function (a){
+            return args[+(a.substr(1,a.length-2))||0];
+        });
+        };
+
+        network = new vis.Network(container, data, options);
+        network.focus(1, {
+        // position: {x:positionx,y:positiony}, // this is not relevant when focusing on nodes
+            scale: 10, 
+            animation: { // -------------------> can be a boolean too!
+            duration: 500,
+            easingFunction: 'easeOutCubic'
+            }
+        });
+
+        
+
+
+
+        network.on("hoverNode", function (params) {
+            // nodes.update([{id: params.node, color:{background:'#220000'}}]);
+            // var nodedata = nodesArray.filter(function (value, index, array){value.id == params.node})[0];
+            var nodedata = (nodes.get(params.node));
+            document.getElementById("infobox").style.visibility = "visible";
+            document.getElementById("infobox").innerHTML = 
+            '<a class="h-100"><h6 style="background-color: rgba(0, 0, 0, 0.3)">{0}<br> Manage</h6><p>Amet sit amet dolor<strong>Lorem, ipsum dolor sit amet consectetur adipisicing.</strong></p></a>'.format(nodedata.label);
+        });
+        network.on("blurNode", function (params) {
+            // c = nodesArray.filter(function (value, index, array){value.id == params.node})[0].color.background;
+            nodes.update([{id: params.node, color:{background:'#999900'}}]);
+            document.getElementById("infobox").innerHTML = '';
+            document.getElementById("infobox").style.visibility = "hidden";
+        });
+        // network.on("showPopup", function (params) {
+        //     // c = nodesArray.filter(function (value, index, array){value.id == params.node})[0].color.background;
+        //     nodes.update([{id: params, color:{background:'#220000'}}]);
+        //     document.getElementById("infobox").style.visibility = "visible";
+        // });
+        // network.on("hidePopup", function (params) {
+        //     // c = nodesArray.filter(function (value, index, array){value.id == params.node})[0].color.background;
+        //     // nodes.update([{id: params.node, color:{background:'#999900'}}]);
+        //     document.getElementById("infobox").style.visibility = "hidden";
+        // });
+
+    }
+
+    function addNode() {
+        var newId = (Math.random() * 1e7).toString(32);
+        nodes.add({id:newId, label:"I'm new!"});
+        nodeIds.push(newId);
+    }
+
+    function changeNode1() {
+        var newColor = '#' + Math.floor((Math.random() * 255 * 255 * 255)).toString(16);
+        nodes.update([{id:1, color:{background:newColor}}]);
+    }
+
+    function removeRandomNode() {
+        var randomNodeId = nodeIds[Math.floor(Math.random() * nodeIds.length)];
+        nodes.remove({id:randomNodeId});
+
+        var index = nodeIds.indexOf(randomNodeId);
+        nodeIds.splice(index,1);
+    }
+
+    function changeOptions() {
+        shadowState = !shadowState;
+        network.setOptions({nodes:{shadow:shadowState},edges:{shadow:shadowState}});
+    }
+
+    function resetAllNodes() {
+        nodes.clear();
+        edges.clear();
+        nodes.add(nodesArray);
+        edges.add(edgesArray);
+    }
+
+    function resetAllNodesStabilize() {
+        resetAllNodes();
+        network.stabilize();
+    }
+
+    function setTheData() {
+        nodes = new vis.DataSet(nodesArray);
+        edges = new vis.DataSet(edgesArray);
+        network.setData({nodes:nodes, edges:edges})
+    }
+
+    function resetAll() {
+        if (network !== null) {
+            network.destroy();
+            network = null;
+        }
+        startNetwork();
+    }
+
+    startNetwork();
+
+    console.log(document.getElementsByClassName("vis-tooltip").length)//[0].innerHTML = 'wTF';
+    
+</script>
+
+
+</body>
+</html>

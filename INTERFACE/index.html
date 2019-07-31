@@ -1,0 +1,794 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>MeTA - 德勤数字化转型挑战赛 </title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <link href="https://fonts.googleapis.com/css?family=Rubik:400,700|Crimson+Text:400,400i" rel="stylesheet">
+  <link rel="stylesheet" href="fonts/icomoon/style.css">
+
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/magnific-popup.css">
+  <link rel="stylesheet" href="css/jquery-ui.css">
+  <link rel="stylesheet" href="css/owl.carousel.min.css">
+  <link rel="stylesheet" href="css/owl.theme.default.min.css">
+  <link rel="stylesheet" href="css/aos.css">
+  <link rel="stylesheet" href="css/style.css">
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>
+  <script type="text/javascript" src="./vis-network.min.js"></script>
+  <link href="./vis-network.min.css" rel="stylesheet" type="text/css" />
+
+
+  <style type="text/css">
+    #mynetwork {
+        /* width: 600px;
+        height: window.innerWidth; */
+        margin: auto;
+        border: 1px solid lightgray;
+
+    }
+    #infobox {
+        position: absolute;
+        /* width: 300px;
+        height: 300px; */
+        /*top: 50%;
+        left: 50%; */
+        margin: 20px 0 0 20px;
+        /* background: #CB4B16;
+        border-radius: 1%; */
+        /* backface-visibility: hidden; */
+        visibility:hidden;
+        z-index:1;
+    }
+    p {
+      color: white
+    }
+
+</style>
+</head>
+
+<body>
+
+  <div class="site-wrap">
+
+
+    <div class="site-navbar py-2">
+
+      <!-- <div class="search-wrap">
+        <div class="container">
+          <a href="#" class="search-close js-search-close"><span class="icon-close2"></span></a>
+          <form action="#" method="post">
+            <input type="text" class="form-control" placeholder="Search keyword and hit enter...">
+          </form>
+        </div>
+      </div> -->
+
+      <div class="container">
+        <div class="d-flex align-items-center justify-content-between">
+          <div class="logo">
+            <div class="site-logo">
+              <a href="index.html" class="js-logo-clone">MeTA - 德勤数字化转型挑战赛 - 编号84</a>
+            </div>
+          </div>
+          <div class="main-nav d-none d-lg-block">
+            <nav class="site-navigation text-right text-md-center" role="navigation">
+              <ul class="site-menu js-clone-nav d-none d-lg-block">
+                <li class="active"><a href="index.html">项目概况</a></li>
+                <li><a href="#mynetwork">项目Demo</a></li>
+                <li class="has-children">
+                  <!-- <a href="#">Dropdown</a>
+                  <ul class="dropdown">
+                    <li><a href="#">Supplements</a></li>
+                    <li class="has-children">
+                      <a href="#">Vitamins</a>
+                      <ul class="dropdown">
+                        <li><a href="#">Supplements</a></li>
+                        <li><a href="#">Vitamins</a></li>
+                        <li><a href="#">Diet &amp; Nutrition</a></li>
+                        <li><a href="#">Tea &amp; Coffee</a></li>
+                      </ul> 
+                    </li>
+                    <li><a href="#">Diet &amp; Nutrition</a></li>
+                    <li><a href="#">Tea &amp; Coffee</a></li>
+                    
+                  </ul>-->
+                </li>
+                <li><a href="#team">团队介绍</a></li>
+                <!-- <li><a href="contact.html">Contact</a></li> -->
+              </ul>
+            </nav>
+          </div>
+          <!-- <div class="icons">
+            <a href="#" class="icons-btn d-inline-block js-search-open"><span class="icon-search"></span></a>
+            <a href="cart.html" class="icons-btn d-inline-block bag">
+              <span class="icon-shopping-bag"></span>
+              <span class="number">2</span>
+            </a>
+            <a href="#" class="site-menu-toggle js-menu-toggle ml-3 d-inline-block d-lg-none"><span
+                class="icon-menu"></span></a>
+          </div> -->
+        </div>
+      </div>
+    </div>
+
+    <div class="site-blocks-cover" style="background-image: url('images/cybwall.jpg');">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-7 mx-auto order-lg-2 align-self-center">
+            <div class="site-block-cover-content text-center" >
+              <h1 style = "text-shadow: 2px 2px #000000;">MeTA</h1>
+              <h2 class="sub-title" style = "background-color:rgba(0, 0, 0, 0.5); font-size: 26px"><strong>全局供应链风险管理</strong></h2>
+              <p>
+                <a href="#mynetwork" class="btn btn-primary px-5 py-3" style="font-family: SimHei">查看Demo<br>(以新能源汽车初创企业为例)</a>
+              </p>
+              <img src="images/icons8.png" alt="Image"> 
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="site-section">
+      <div class="container">
+        <div class="row align-items-stretch section-overlap">
+          <div class="col-md-5 col-lg-3 mb-4 mb-lg-0" >
+            <div class="banner-wrap bg-primary h-100">
+              <a  class="h-100" style = "background:rgba(35, 38, 187, 0.85); box-shadow: 2px 2px rgba(128, 128, 128, 0.5)">
+                <h5>'M' <br> Manage</h5>
+                <p style="font-family: SimHei">
+                    <strong>META 帮助初创企业管理、掌控自己的供应链, 尤其是那些上游供应链涉及到许多高度专业化细分行业的高新技术初创企业</strong>
+                  <!-- <strong>Lorem, ipsum dolor sit amet consectetur adipisicing.</strong> -->
+                </p>
+              </a>
+            </div>
+          </div>
+          <div class="col-md-5 col-lg-3 mb-4 mb-lg-0">
+            <div class="banner-wrap h-100" >
+              <a class="h-100" style = "background:rgba(227, 58, 105, 0.9); box-shadow: 2px 2px rgba(128, 128, 128, 0.5)">
+                <h5>'E' <br> Efficient</h5>
+                <p style="font-family: SimHei">
+                    <strong>我们的产品致力于减少 '供应链中每个细分行业都需要专业人员做出供应链决策' 的情况, 助力企业实现"Lean Startup"</strong>
+                  <!-- <strong>Lorem, ipsum dolor sit amet consectetur adipisicing.</strong> -->
+                </p>
+              </a>
+            </div>
+          </div>
+          <div class="col-md-5 col-lg-3 mb-4 mb-lg-0">
+            <div class="banner-wrap bg-warning h-100">
+              <a  class="h-100" style = "background:rgba(11, 59, 128, 0.9); box-shadow: 2px 2px rgba(128, 128, 128, 0.5)">
+                <h5>'T' <br> Tracing-back</h5>
+                <p style="font-family: SimHei">
+                  <!-- Amet sit amet dolor -->
+                  <strong>由于评估算法可以轻易延申到不同行业, META 可以经济有效地评估比上游更上游的'源头企业', 更早发现供应链的潜在风险, 助力企业掌控全局</strong>
+                </p>
+              </a>
+            </div>
+          </div>
+          <div class="col-md-5 col-lg-3 mb-4 mb-lg-0">
+              <div class="banner-wrap bg-primary h-100">
+                <a  class="h-100" style = "background:rgba(25, 230, 187, 0.9); box-shadow: 2px 2px rgba(128, 128, 128, 0.5)">
+                  <h5>'A' <br> Active</h5>
+                  <p style="font-family: SimHei">
+                    <!-- Amet sit amet dolor -->
+                    <strong>由于评估算法实现高度自动化, 实时监控变得可行, 并且允许企业动态参考不同的决策对其供应链的整体影响</strong>
+                  </p>
+                </a>
+              </div>
+            </div>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- <div class="site-section">
+      <div class="container">
+        <div class="row">
+          <div class="title-section text-center col-12">
+            <h2 class="text-uppercase">Popular Products</h2>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-sm-6 col-lg-4 text-center item mb-4">
+            <span class="tag">Sale</span>
+            <a href="shop-single.html"> <img src="images/product_01.png" alt="Image"></a>
+            <h3 class="text-dark"><a href="shop-single.html">Bioderma</a></h3>
+            <p class="price"><del>95.00</del> &mdash; $55.00</p>
+          </div>
+          <div class="col-sm-6 col-lg-4 text-center item mb-4">
+            <a href="shop-single.html"> <img src="images/product_02.png" alt="Image"></a>
+            <h3 class="text-dark"><a href="shop-single.html">Chanca Piedra</a></h3>
+            <p class="price">$70.00</p>
+          </div>
+          <div class="col-sm-6 col-lg-4 text-center item mb-4">
+            <a href="shop-single.html"> <img src="images/product_03.png" alt="Image"></a>
+            <h3 class="text-dark"><a href="shop-single.html">Umcka Cold Care</a></h3>
+            <p class="price">$120.00</p>
+          </div>
+
+          <div class="col-sm-6 col-lg-4 text-center item mb-4">
+
+            <a href="shop-single.html"> <img src="images/product_04.png" alt="Image"></a>
+            <h3 class="text-dark"><a href="shop-single.html">Cetyl Pure</a></h3>
+            <p class="price"><del>45.00</del> &mdash; $20.00</p>
+          </div>
+          <div class="col-sm-6 col-lg-4 text-center item mb-4">
+            <a href="shop-single.html"> <img src="images/product_05.png" alt="Image"></a>
+            <h3 class="text-dark"><a href="shop-single.html">CLA Core</a></h3>
+            <p class="price">$38.00</p>
+          </div>
+          <div class="col-sm-6 col-lg-4 text-center item mb-4">
+            <span class="tag">Sale</span>
+            <a href="shop-single.html"> <img src="images/product_06.png" alt="Image"></a>
+            <h3 class="text-dark"><a href="shop-single.html">Poo Pourri</a></h3>
+            <p class="price"><del>$89</del> &mdash; $38.00</p>
+          </div>
+        </div>
+        <div class="row mt-5">
+          <div class="col-12 text-center">
+            <a href="shop.html" class="btn btn-primary px-4 py-3">View All Products</a>
+          </div>
+        </div>
+      </div>
+    </div> -->
+
+<!--     
+    <div class="site-section bg-light">
+      <div class="container">
+        <div class="row">
+          <div class="title-section text-center col-12">
+            <h2 class="text-uppercase">New Products</h2>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12 block-3 products-wrap">
+            <div class="nonloop-block-3 owl-carousel">
+
+              <div class="text-center item mb-4">
+                <a href="shop-single.html"> <img src="images/product_03.png" alt="Image"></a>
+                <h3 class="text-dark"><a href="shop-single.html">Umcka Cold Care</a></h3>
+                <p class="price">$120.00</p>
+              </div>
+
+              <div class="text-center item mb-4">
+                <a href="shop-single.html"> <img src="images/product_01.png" alt="Image"></a>
+                <h3 class="text-dark"><a href="shop-single.html">Umcka Cold Care</a></h3>
+                <p class="price">$120.00</p>
+              </div>
+
+              <div class="text-center item mb-4">
+                <a href="shop-single.html"> <img src="images/product_02.png" alt="Image"></a>
+                <h3 class="text-dark"><a href="shop-single.html">Umcka Cold Care</a></h3>
+                <p class="price">$120.00</p>
+              </div>
+
+              <div class="text-center item mb-4">
+                <a href="shop-single.html"> <img src="images/product_04.png" alt="Image"></a>
+                <h3 class="text-dark"><a href="shop-single.html">Umcka Cold Care</a></h3>
+                <p class="price">$120.00</p>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div> -->
+
+    <!-- <div class="site-section">
+      <div class="container">
+        <div class="row">
+          <div class="title-section text-center col-8">
+            <h2 class="text-uppercase">Testimonials</h2>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-8 block-4 products-wrap">
+            <div class="nonloop-block-3 no-direction owl-carousel">
+        
+              <div class="testimony">
+                <blockquote>
+                  <img src="images/person_1.jpg" alt="Image" class="img-fluid w-25 mb-4 rounded-circle">
+                  <p>&ldquo;Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nemo omnis voluptatem consectetur quam tempore obcaecati maiores voluptate aspernatur iusto eveniet, placeat ab quod tenetur ducimus. Minus ratione sit quaerat unde.&rdquo;</p>
+                </blockquote>
+
+                <p>&mdash; Kelly Holmes</p>
+              </div>
+        
+              <div class="testimony">
+                <blockquote>
+                  <img src="images/person_2.jpg" alt="Image" class="img-fluid w-25 mb-4 rounded-circle">
+                  <p>&ldquo;Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nemo omnis voluptatem consectetur quam tempore
+                    obcaecati maiores voluptate aspernatur iusto eveniet, placeat ab quod tenetur ducimus. Minus ratione sit quaerat
+                    unde.&rdquo;</p>
+                </blockquote>
+              
+                <p>&mdash; Rebecca Morando</p>
+              </div>
+        
+              <div class="testimony">
+                <blockquote>
+                  <img src="images/person_3.jpg" alt="Image" class="img-fluid w-25 mb-4 rounded-circle">
+                  <p>&ldquo;Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nemo omnis voluptatem consectetur quam tempore
+                    obcaecati maiores voluptate aspernatur iusto eveniet, placeat ab quod tenetur ducimus. Minus ratione sit quaerat
+                    unde.&rdquo;</p>
+                </blockquote>
+              
+                <p>&mdash; Lucas Gallone</p>
+              </div>
+        
+              <div class="testimony">
+                <blockquote>
+                  <img src="images/person_4.jpg" alt="Image" class="img-fluid w-25 mb-4 rounded-circle">
+                  <p>&ldquo;Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nemo omnis voluptatem consectetur quam tempore
+                    obcaecati maiores voluptate aspernatur iusto eveniet, placeat ab quod tenetur ducimus. Minus ratione sit quaerat
+                    unde.&rdquo;</p>
+                </blockquote>
+              
+                <p>&mdash; Andrew Neel</p>
+              </div>
+        
+            </div>
+          </div>
+        </div>
+      </div>
+    </div> -->
+
+    <div class="site-section bg-secondary bg-image" id='team'>
+      <div class="container">
+          <div class="title-section text-center">
+              <h2 class="text-uppercase"><strong>我们的团队</strong></h2>
+            </div>
+        <div class="row align-items-stretch">
+          <div class="col-lg mb-4 mb-lg-0">
+            <a  class="banner-1 h-100 d-flex" style="background-image: url('images/bg_3.jpg');">
+              <div class="align-self-center">
+                <div class="banner-1-inner align-self-center">
+                <h2 style="font-family: SimHei">盛一诺</h2>
+                </div >
+                <p style="color: black ; font-family: SimHei">就读于清华大学经管学院MIS专业本科，德勤研究部实习中。在团队中负责算法开发与资料收集。现实的理想主义者，喜欢养猫、写作、睡觉，每月都立志戒奶茶而无果。
+                </p>
+                <img src="images/sheng.jpg" alt="Image" class="img-fluid col-lg-8 col-md-6 w-2 mb-2 rounded-circle">
+              </div>
+            </a>
+          </div>
+          <div class="col-lg mb-4 mb-lg-0">
+            <a  class="banner-1 h-100 d-flex" style="background-image: url('images/bg_3.jpg');">
+              <div class="align-self-center">
+              <div class="banner-1-inner align-self-center">
+                <h2 style="font-family: SimHei">潘进鑫</h2>
+              </div>
+                <p style="color: black ; font-family: SimHei">就读于哥伦比亚大学计算机科学专业本科，量化期货交易方向实习中。做过工业设计助教，在团队中负责界面与网站开发。喜欢做数独、踢足球。闲下来就琢磨国际政治和纽约烤肉哪家强。
+                </p>
+                <img src="images/pan.jpg" alt="Image" class="img-fluid col-lg-8 col-md-6 w-2 mb-2 rounded-circle">
+              </div>
+            </a>
+          </div>
+          <div class="col-lg mb-4 mb-lg-0">
+              <a  class="banner-1 h-100 d-flex" style="background-image: url('images/bg_3.jpg');">
+                <div class="align-self-center">
+                  <div class="banner-1-inner align-self-center">
+                  <h2>Sunita Hu</h2>
+                  </div >
+                  <p style="color: black ; font-family: SimHei">加拿大籍华人，就读于哥伦比亚大学金融经济+艺术史双专业本科，精品咨询公司实习中。在团队中负责资料收集和视频制作。生活中喜欢摄影、美食、旅行。最大的梦想是拍摄全世界的野生动物。
+                  </p>
+                  <img src="images/hu.jpg" alt="Image" class="img-fluid col-lg-8 col-md-6 w-2 mb-2 rounded-circle">
+                </div>
+              </a>
+            </div>
+            <div class="col-lg mb-4 mb-lg-0">
+                <a  class="banner-1 h-100 d-flex" style="background-image: url('images/bg_3.jpg');">
+                  <div class="align-self-center">
+                    <div class="banner-1-inner align-self-center">
+                    <h2 style="font-family: SimHei">蔡佳城</h2>
+                    </div >
+                    <p style="color: black; font-family: SimHei">
+                        就读于南洋理工大学机械与航天工程学院研究生。研究的方向为人工智能与无人驾驶。在团队中负责算法开发与理论支持。期待有朝一日能搭乘自己发明的无人驾驶汽车环游世界。                        
+                    </p>
+                    <img src="images/cai.jpg" alt="Image" class="img-fluid col-lg-8 col-md-6 w-2 mb-2 rounded-circle">
+                  </div>
+                </a>
+              </div>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- <footer class="site-footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6 col-lg-3 mb-4 mb-lg-0">
+
+            <div class="block-7">
+              <h3 class="footer-heading mb-4">About Us</h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius quae reiciendis distinctio voluptates
+                sed dolorum excepturi iure eaque, aut unde.</p>
+            </div>
+
+          </div>
+          <div class="col-lg-3 mx-auto mb-5 mb-lg-0">
+            <h3 class="footer-heading mb-4">Quick Links</h3>
+            <ul class="list-unstyled">
+              <li><a href="#">Supplements</a></li>
+              <li><a href="#">Vitamins</a></li>
+              <li><a href="#">Diet &amp; Nutrition</a></li>
+              <li><a href="#">Tea &amp; Coffee</a></li>
+            </ul>
+          </div>
+
+          <div class="col-md-6 col-lg-3">
+            <div class="block-5 mb-5">
+              <h3 class="footer-heading mb-4">Contact Info</h3>
+              <ul class="list-unstyled">
+                <li class="address">203 Fake St. Mountain View, San Francisco, California, USA</li>
+                <li class="phone"><a href="tel://23923929210">+2 392 3929 210</a></li>
+                <li class="email">emailaddress@domain.com</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="row pt-5 mt-5 text-center">
+          <div class="col-md-12">
+            <p>
+              Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0.
+              Copyright &copy;
+              <script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made
+              with <i class="icon-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank"
+                class="text-primary">Colorlib</a>
+              Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0.
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer> -->
+
+  </div>
+
+  <script src="js/jquery-3.3.1.min.js"></script>
+  <script src="js/jquery-ui.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/owl.carousel.min.js"></script>
+  <script src="js/jquery.magnific-popup.min.js"></script>
+  <script src="js/aos.js"></script>
+
+  <script src="js/main.js"></script>
+  <script src="js/datatable.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+  <div id='infobox'>
+      <!-- <a class="h-100"><h6 style="background-color: rgba(0, 0, 0, 0.3)">hahhaha<br> Manage</h6>
+          <p>Amet sit amet dolor<strong>Lorem, ipsum dolor sit amet consectetur adipisicing.</strong></p>
+      </a> -->
+</div>
+
+<div id="mynetwork"></div>
+
+<script type="text/javascript">
+  // import './js/datatable.js';
+  var nodeIds, shadowState, nodesArray, nodes, edgesArray, edges, network;
+
+
+  function moveCircle(e) {
+      document.getElementById('infobox').style.left = 
+  TweenLite.to(document.getElementById('infobox'), 0.1, {
+    css: {
+      left: e.pageX,
+      top: e.pageY
+    }
+  });
+  }
+  window.addEventListener("pointermove", function(e) {
+      moveCircle(e);
+  });
+
+  function startNetwork() {
+      // this list is kept to remove a random node.. we do not add node 1 here because it's used for changes
+      nodeIds = [2, 3, 4, 5];
+      shadowState = false;
+
+
+      // create an array with nodes
+      nodesArray = [
+          {id: 1, label: '新能源汽车（甲方）', fixed: false, mass: 10, x:0, y:0, margin: 25, cur_score: 89,
+          shapeProperties: {
+              
+          }, font: {size: 20}, borderWidth : 2, group: 1, 
+          color:{background: '#40D8CD'},// title:'aaahhh'
+          },
+          {id: 2, label: '电池：\n三星SDI', group: 2, company_id:0, mass: 5, margin: 20,
+          color:{background: '#40d2cd'}},
+          {id: 3, label: '电机（集成）：\n博世', group: 2, company_id:0, mass: 5 , margin: 20,
+          color:{background: '#40decd'} },   
+
+      ];
+      nodes = new vis.DataSet(nodesArray);
+
+      // create an array with edges
+      edgesArray = [
+          {id: 3, from: 1, to: 3, directed: true, hoverWidth: 0, selectionWidth: 0, chosen: false, width : 1*1.5, color:{color: '#40decd'}},
+          {id: 2, from: 1, to: 2, directed: true, hoverWidth: 0, selectionWidth: 0, chosen: false, width : 1*2, color:{color: '#40d2cd'}},
+          // {from: 20, to: 2, directed: true, hoverWidth: 0, selectionWidth: 0, chosen: false},
+          // // {from: 20, to: 3, directed: true},
+          // {from: 21, to: 2, directed: true, hoverWidth: 0, selectionWidth: 0, chosen: false},
+          // {from: 31, to: 3, directed: true, hoverWidth: 0, selectionWidth: 0, chosen: false},
+          // {from: 22, to: 2, directed: true, hoverWidth: 0, selectionWidth: 0, chosen: false},
+          // {from: 23, to: 2, directed: true, hoverWidth: 0, selectionWidth: 0, chosen: false},
+          // {from: 32, to: 3, directed: true, hoverWidth: 0, selectionWidth: 0, chosen: false},
+      ];
+      edges = new vis.DataSet(edgesArray);
+
+      // create a network
+      var container = document.getElementById('mynetwork');
+      var data = {
+          nodes: nodes,
+          edges: edges
+      };
+      var options = {
+          height: String(window.innerHeight*0.8),
+          width: String(window.innerWidth),
+          interaction:{hover:true, selectable: true},
+    manipulation: {
+      enabled: false
+    },
+          physics:{
+              minVelocity: 0.0001,
+              // solver: 'hierarchicalRepulsion',
+              barnesHut:{
+                  damping: 0.2,
+                  // avoidOverlap: false,
+                  gravitationalConstant : -4000,
+                  springLength: 250,
+                  springConstant: 0.7
+              }
+          },
+          edges: {hoverWidth: 0, selectionWidth: 0, chosen: false},
+          nodes:{
+              margin: 15,
+              
+              shape: 'box'
+          },
+          layout:{
+              hierarchical:{
+                  enabled: false,
+                  blockShifting: false,
+                  direction: 'RL'
+              },
+              randomSeed : 6666
+          }
+      };
+
+      String.prototype.format = function () {
+      var args = [].slice.call(arguments);
+      return this.replace(/(\{\d+\})/g, function (a){
+          return args[+(a.substr(1,a.length-2))||0];
+      });
+      };
+
+      network = new vis.Network(container, data, options);
+      network.focus(1, {
+      // position: {x:positionx,y:positiony}, // this is not relevant when focusing on nodes
+          scale: 10, 
+          animation: { // -------------------> can be a boolean too!
+          duration: 500,
+          easingFunction: 'easeOutCubic'
+          }
+      });
+
+      
+
+
+
+
+      function hoverFunct  (params) {
+          // nodes.update([{id: params.node, color:{background:'#220000'}}]);
+          // var nodedata = nodesArray.filter(function (value, index, array){value.id == params.node})[0];
+          var nodedata = (nodes.get(params.node));
+          // console.log(companies[String(industry_company[String(nodedata.id)][1][String(nodedata.company_id)])]);
+          if (nodedata.group == 2){company_data = companies[String(industry_company[String(nodedata.id)][1][String(nodedata.company_id)])];
+            document.getElementById("infobox").style.visibility = "visible";
+            document.getElementById("infobox").innerHTML = 
+            '<div class= "container"><div class="banner-5 h-100 w-100"><a class="row" style="background-color: {7}"><p class="col-lg-12 border-bottom-0 align-self-center">{0}<br>综合评分：{1} </p></a><a class="row" style="background-color: #224874"><p class="col-lg-6 border-right">行业关键词：<br> {2} <br> 行业关键参数：<br> {3} </p><p class="col-lg-6"><strong>产品竞争力: {4}<br>经营状况: {5}<br>上游质量: {6}</strong></p></a></div></div>'
+            .format(nodedata.label, company_data[3], 
+            industry_company[String(nodedata.id)][4], industry_company[String(nodedata.id)][5], company_data[2][0], company_data[2][1], company_data[2][2], nodedata.color.background);}
+          else if (nodedata.group == 3){
+            company_data = companies[String(nodedata.id)];
+            document.getElementById("infobox").style.visibility = "visible";
+            document.getElementById("infobox").innerHTML = 
+            '<div class= "container"><div class="banner-5 h-100 w-100"><a class="row" style="background-color: {6}"><p class="col-lg-12 border-bottom-0 align-self-center">{0} {1}<br>综合评分：{2} </p></a><a class="row" style="background-color: #224874"><p class="col-lg-12"><strong>产品竞争力: {3}<br>经营状况: {4}<br>上游质量: {5}</strong></p></a></div></div>'
+            .format(industry_company[String(parseInt(nodedata.id/10))][0], company_data[0], parseInt((company_data[1][0]+ company_data[1][1]+ company_data[1][2])/3),
+            company_data[1][0], company_data[1][1], company_data[1][2], nodedata.color.background);
+          }
+          else if (nodedata.group == 1){
+            nodes.get(params.node)
+            company_data2 = companies[String(industry_company['2'][1][String(nodes.get(2).company_id)])];
+            company_data3 = companies[String(industry_company['3'][1][String(nodes.get(3).company_id)])];
+            document.getElementById("infobox").style.visibility = "visible";
+            document.getElementById("infobox").innerHTML = 
+            '<div class= "container"><div class="banner-5 h-100 w-100"><a class="row" style="background-color: {2}"><p class="col-lg-12 border-bottom-0 align-self-center">{0}<br>当前配置供应链评分：{1} </p></a></div></div>'
+            .format(nodedata.label, parseInt((company_data2[3]*2+company_data3[3]*1.5)/3.5),nodedata.color.background);
+          }
+      }
+      function hoverFunctClick  (nodedata) {
+          // nodes.update([{id: params.node, color:{background:'#220000'}}]);
+          // var nodedata = nodesArray.filter(function (value, index, array){value.id == params.node})[0];
+          document.getElementById("infobox").style.visibility = "visible";
+          company_data = companies[String(industry_company[String(nodedata.id)][1][String(nodedata.company_id)])];
+          document.getElementById("infobox").innerHTML = 
+            '<div class= "container"><div class="banner-5 h-100 w-100"><a class="row" style="background-color: {7}"><p class="col-lg-12 border-bottom-0 align-self-center">{0}<br>综合评分：{1} </p></a><a class="row" style="background-color: #224874"><p class="col-lg-6 border-right">行业关键词：<br> {2} <br> 行业关键参数：<br> {3} </p><p class="col-lg-6"><strong>产品竞争力: {4}<br>经营状况: {5}<br>上游质量: {6}</strong></p></a></div></div>'
+            .format(nodedata.label, company_data[3], 
+            industry_company[String(nodedata.id)][4], industry_company[String(nodedata.id)][5], company_data[2][0], company_data[2][1], company_data[2][2], nodedata.color.background);
+      }
+
+
+      network.on("hoverNode", hoverFunct);
+      network.on("blurNode", function (params) {
+          // c = nodesArray.filter(function (value, index, array){value.id == params.node})[0].color.background;
+          // nodes.update([{id: params.node, color:{background:'#999900'}}]);
+          document.getElementById("infobox").innerHTML = '';
+          document.getElementById("infobox").style.visibility = "hidden";
+      });
+
+
+
+      network.on("click", function (params) {
+          // c = nodesArray.filter(function (value, index, array){value.id == params.node})[0].color.background;
+          if (params.nodes != null){
+            var nodedata = (nodes.get(params.nodes[0]));
+            if (nodedata.group == 2){
+              // console.log(nodedata);
+              modify_node(String(nodedata.id), nodedata);
+
+              // if (nodedata.company_id == industry_company[2][0]) {
+              //   nodes.update([{id: nodedata.id, company_id: 0}]);
+              // }
+            }
+          }
+      });
+
+      function modify_node(modify_id, nodedata){
+        var old_comp_id = String(industry_company[modify_id][1][nodedata.company_id]);
+
+        for (var i; i <  industry_company[modify_id][2].lenth; i++){
+          var industry_to_be_removed = industry_company[modify_id][2][i];
+          nodes.remove({group: industry_to_be_removed});
+        }
+        if (nodedata.company_id == industry_company[modify_id][0]-1){
+          nodedata.company_id = 0;
+        }else{
+          nodedata.company_id = nodedata.company_id + 1;
+        }
+        // console.log(companies[String(industry_company[modify_id][1][nodedata.company_id])]);
+        var new_comp = companies[String(industry_company[modify_id][1][nodedata.company_id])];
+        nodedata.label = industry_company[modify_id][3] +'\n' + new_comp[0];
+        nodedata.color = {background:  '#40'+new_comp[4]+'cd'};
+        // console.log(old_comp_id);
+        edges.update([{color: {color: '#40'+new_comp[4]+'cd'}, id: parseInt(modify_id)}]);
+        uppdateTertiary (old_comp_id, String(industry_company[modify_id][1][nodedata.company_id]));
+
+        nodes.update([nodedata]);
+        update_parent_node_color();
+        hoverFunctClick(nodedata);
+      }
+      // network.on("showPopup", function (params) {
+      //     // c = nodesArray.filter(function (value, index, array){value.id == params.node})[0].color.background;
+      //     nodes.update([{id: params, color:{background:'#220000'}}]);
+      //     document.getElementById("infobox").style.visibility = "visible";
+      // });
+      // network.on("hidePopup", function (params) {
+      //     // c = nodesArray.filter(function (value, index, array){value.id == params.node})[0].color.background;
+      //     // nodes.update([{id: params.node, color:{background:'#999900'}}]);
+      //     document.getElementById("infobox").style.visibility = "hidden";
+      // });
+
+  }
+  function update_parent_node_color(){
+        var avgc = '#'+avgColor(nodes.get(2).color.background.substr(1), nodes.get(3).color.background.substr(1));
+        console.log(nodes.get(3).color.background);
+        nodes.update([{id:1, color:{background: avgc}}]);
+      }
+//{from: 1, to: 2, directed: true, hoverWidth: 0, selectionWidth: 0, chosen: false, width : 1*2}
+  
+  function uppdateTertiary (companyIDold, companyIDnew){
+    targetComps = companies[String(companyIDold)][1];
+    for (var i = 0; i < targetComps.length; i++){
+      nodes.remove({id:targetComps[i]});
+      while (network.body.data.edges.remove({id:targetComps[i]}).length != 0){
+      }
+    }
+    targetComps = companies[String(companyIDnew)][1];
+    var m = -1;
+    if (String(companyIDold) == '2'){
+      m = -80;
+    }else{
+      m = 80;
+    }
+    for (var i = 0; i < targetComps.length; i++){
+      nodes.add({id:targetComps[i], label: companies[String(targetComps[i])][0], group: 3, x:m, color:{background:  '#80'+companies[String(targetComps[i])][2]+'cd'}});
+      // console.log({from: parseInt(companyIDnew), to: targetComps[i]});
+      // network.body.data.edges.add({from: parseInt(companyIDnew), to: targetComps[i], id:targetComps[i]});
+      edges.add({id:targetComps[i], from: parseInt(parseInt(companyIDnew)/10), to: targetComps[i], direted: true, id:targetComps[i], width: 1* weight[String(parseInt(parseInt(companyIDnew)/10))][String(parseInt(targetComps[i]/10))]});
+      // edges.update(edges);
+      // console.log(network.body.data.nodes);
+      // color:{color: rgba(150, companies[String(targetComps[i])][2],50,1)}
+      edges.update([{id:targetComps[i],color:{color: '#48'+companies[String(targetComps[i])][2]+'cc'}}])
+
+    }
+          console.log(network.body.data.edges);
+
+  }
+
+
+  function addNode() {
+      var newId = (Math.random() * 1e7).toString(32);
+      nodes.add({id:newId, label:"I'm new!"});
+      nodeIds.push(newId);
+  }
+
+  function changeNode1() {
+      var newColor = '#' + Math.floor((Math.random() * 255 * 255 * 255)).toString(16);
+      nodes.update([{id:1, color:{background:newColor}}]);
+  }
+
+  function removeRandomNode() {
+      var randomNodeId = nodeIds[Math.floor(Math.random() * nodeIds.length)];
+      nodes.remove({id:randomNodeId});
+
+      var index = nodeIds.indexOf(randomNodeId);
+      nodeIds.splice(index,1);
+  }
+
+  function changeOptions() {
+      shadowState = !shadowState;
+      network.setOptions({nodes:{shadow:shadowState},edges:{shadow:shadowState}});
+  }
+
+  function resetAllNodes() {
+      nodes.clear();
+      edges.clear();
+      nodes.add(nodesArray);
+      edges.add(edgesArray);
+  }
+
+  function resetAllNodesStabilize() {
+      resetAllNodes();
+      network.stabilize();
+  }
+
+  function setTheData() {
+      nodes = new vis.DataSet(nodesArray);
+      edges = new vis.DataSet(edgesArray);
+      network.setData({nodes:nodes, edges:edges})
+  }
+
+  function resetAll() {
+      if (network !== null) {
+          network.destroy();
+          network = null;
+      }
+      startNetwork();
+  }
+  startNetwork();
+  uppdateTertiary ('22', '21');
+  uppdateTertiary ('32', '31');  
+  update_parent_node_color();
+</script>
+
+
+
+
+
+</body>
+
+</html>

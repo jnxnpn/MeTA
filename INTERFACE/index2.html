@@ -1,0 +1,85 @@
+
+<!doctype html>
+<html>
+<head>
+    <title>Network | Dynamic Data</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Rubik:400,700|Crimson+Text:400,400i" rel="stylesheet">
+    <link rel="stylesheet" href="fonts/icomoon/style.css">
+  
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+    <link rel="stylesheet" href="css/jquery-ui.css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+  
+  
+    <link rel="stylesheet" href="css/aos.css">
+  
+    <link rel="stylesheet" href="css/style.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>
+    <script type="text/javascript" src="./vis-network.min.js"></script>
+    <link href="./vis-network.min.css" rel="stylesheet" type="text/css" />
+
+    <style type="text/css">
+        #mynetwork {
+            /* width: 600px;
+            height: window.innerWidth; */
+            border: 1px solid lightgray;
+        }
+
+        p {
+            max-width:600px;
+        }
+
+        h4 {
+            margin-bottom:3px;
+        }
+        #infobox {
+            position: absolute;
+            /* width: 300px;
+            height: 300px;
+            top: 50%;
+            left: 50%; */
+            margin: 20px 0 0 20px;
+            /* background: #CB4B16;
+            border-radius: 1%; */
+            /* backface-visibility: hidden; */
+            visibility:visible;
+            z-index:1;
+        }
+    </style>
+</head>
+
+<div class="banner-wrap bg-primary" style='width: 200px ' id = "infobox">
+
+      </div>
+
+<!-- <div class= "container" id='infobox'>
+    <div class="banner-5 h-100 w-25">
+        <a class="row" style="background-color: rgba(53, 253, 220, 0.945)">
+
+            <h6 class="col-lg-12 border-bottom-0 align-self-center ">行业<br> {公司}{评分} 
+            </h6>
+        </a>
+        <a class="row" style="background-color: rgba(53, 253, 96, 0.945)">
+            <p class="col-lg-6">行业关键词：<br> {dolor} <br> 行业关键参数：<br> {dolor}</p>
+            <p class="col-lg-6">Amet sit amet dolor<strong>Lorem, ipsum dolor sit amet consectetur adipisicing.</strong></p>
+        </a>
+    </div>
+</div> -->
+
+
+<div class= "container" id="infobox"><div class="banner-5 h-100 w-25"><a class="row" style="background-color: rgba(53, 253, 220, 0.945)"><h6 class="col-lg-12 border-bottom-0 align-self-center ">行业<br> 公司 评分 </h6></a><a class="row" style="background-color: rgba(53, 253, 96, 0.945)"><p class="col-lg-6">行业关键词：<br> dolor <br> 行业关键参数：<br> dolor </p><p class="col-lg-6">Amet sit amet dolor<strong>Lorem, ipsum dolor sit amet consectetur adipisicing.</strong></p></a></div></div>
+
+
+
+<div id="mynetwork"></div>
+<script type="text/javascript">
+
+
+</script>
+
+</body>
+</html>
